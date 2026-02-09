@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Calistoga, Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const roboto = Roboto({ subsets: ["latin"], variable: "--font-sans" });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const calistoga = Calistoga({
   subsets: ["latin"],
+  variable: "--font-display",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      className={`${roboto.variable} ${calistoga.variable}`}
+    >
+      <body className={`flex flex-col min-h-screen font-sans antialiased`}>
+        <header>
+          <Navbar />
+        </header>
+
+        <main className="flex-1 flex justify-center items-center">
+          {children}
+        </main>
       </body>
     </html>
   );
