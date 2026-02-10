@@ -5,6 +5,7 @@ import Courses from "@/components/home/courses";
 import Testimonials from "@/components/home/testimonials";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import RegisterButton from "@/components/register-button";
 
 const Home = () => {
   return (
@@ -24,12 +25,7 @@ const Home = () => {
             college in Biratnagar which is known for producing outstanding
             students.
           </p>
-          <Button
-            asChild
-            size={"lg"}
-          >
-            <Link href="/register">Register</Link>
-          </Button>
+          <RegisterButton />
         </div>
 
         <Image

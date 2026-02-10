@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
-import NavLinks from "./nav-links";
 import Logo from "@/public/assets/logo.png";
 import Image from "next/image";
+import NavLinks from "./nav-links";
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-card shadow-sm flex justify-between items-center px-10 py-5">
+    <nav className="w-full bg-card shadow-sm flex justify-between items-center px-6 py-5 md:px-10">
       <Link
         href="/"
         className="hover:opacity-80 transition-opacity duration-200"
