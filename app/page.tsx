@@ -3,8 +3,6 @@ import Image from "next/image";
 import HeroImage from "@/public/assets/hero.jpeg";
 import Courses from "@/components/home/courses";
 import Testimonials from "@/components/home/testimonials";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import RegisterButton from "@/components/register-button";
 
 const Home = () => {
