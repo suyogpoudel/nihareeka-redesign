@@ -8,6 +8,7 @@ type Program = {
   careerOutcomes: string[];
   link: string;
   syllabus: string;
+  image: string;
 };
 
 export const programs: Program[] = [
@@ -33,8 +34,9 @@ export const programs: Program[] = [
       "Computer Support Service Specialist",
       "Software Publisher",
     ],
-    link: "/programs/bca",
+    link: "bca",
     syllabus: "https://www.collegesnepal.com/syllabus/bca/",
+    image: "/assets/courses/bca.jpeg",
   },
   {
     title: "BSc. CSIT",
@@ -57,8 +59,9 @@ export const programs: Program[] = [
       "Computer Support Service Specialist",
       "Software Publisher",
     ],
-    link: "/programs/csit",
+    link: "csit",
     syllabus: "https://www.collegesnepal.com/syllabus/bsc-csit/",
+    image: "/assets/courses/csit.jpeg",
   },
   {
     title: "BIM",
@@ -82,8 +85,9 @@ export const programs: Program[] = [
       "Computer Support Service Specialist",
       "Software Publisher",
     ],
-    link: "/programs/bim",
+    link: "bim",
     syllabus: "https://www.collegesnepal.com/syllabus/bim/",
+    image: "/assets/courses/bim.jpeg",
   },
   {
     title: "BHM",
@@ -109,8 +113,9 @@ export const programs: Program[] = [
       "Chef",
       "Cook",
     ],
-    link: "/programs/bhm",
+    link: "bhm",
     syllabus: "https://www.collegesnepal.com/syllabus/bhm/",
+    image: "/assets/courses/bhm.jpeg",
   },
   {
     title: "BBS",
@@ -135,8 +140,9 @@ export const programs: Program[] = [
       "Financial Advisor",
       "Marketer",
     ],
-    link: "/programs/bbs",
+    link: "bbs",
     syllabus: "https://www.collegesnepal.com/syllabus/bbs/",
+    image: "/assets/courses/bbs.jpeg",
   },
   {
     title: "MBS",
@@ -157,7 +163,8 @@ export const programs: Program[] = [
       "Junior Analyst",
       "Publisher",
     ],
-    link: "/programs/mbs",
+    link: "mbs",
     syllabus: "https://www.collegesnepal.com/syllabus/mbs/",
+    image: "/assets/courses/mbs.jpg",
   },
 ];
