@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Calistoga, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const roboto = Roboto({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -34,6 +35,8 @@ export default function RootLayout({
         <main className="flex-1 flex justify-center items-center">
           {children}
         </main>
+
+        <Footer />
       </body>
     </html>
   );
