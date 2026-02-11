@@ -1,5 +1,6 @@
-import { Separator } from "@/components/ui/separator";
+import ProgramCard from "@/components/program-card";
 import { programs } from "@/data/programs";
+import { Calendar, Check, CheckCircle, Clock, School } from "lucide-react";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
 
@@ -22,16 +23,26 @@ const ProgramPage = async ({
     notFound();
   }
 
+  const programCardData = [
+    { icon: Calendar, title: "Duration", value: program.duration },
+    {
+      icon: Clock,
+      title: "Credit Hours",
+      value: program.creditHour.toString(),
+    },
+    { icon: School, title: "Affiliation", value: program.affiliation },
+  ];
+
   return (
     <div className="container">
-      <div className="flex items-center justify-between w-full gap-8 max-md:flex-col-reverse mb-4">
+      <div className="flex items-center justify-between w-full gap-8 max-md:flex-col-reverse">
         <div className="flex flex-col gap-4 text-center">
           <h1 className="heading">{program.title}</h1>
           <p className="text-muted-foreground">{program.description}</p>
           <h2 className="text-primary text-xl font-semibold">
             Career Outcomes
           </h2>
-          <div className="grid max-sm:grid-cols-1 grid-cols-2 gap-4">
+          <div className="grid max-sm:grid-cols-1 w-full grid-cols-2 gap-4">
             {program.careerOutcomes.map((outcome) => (
               <div
                 key={outcome}
@@ -50,7 +61,34 @@ const ProgramPage = async ({
           className="rounded-r-4xl shadow-lg object-cover max-md:rounded-2xl"
         />
       </div>
-      <Separator />
+
+      <div className="grid grid-cols-3 max-md:grid-cols-1 gap-8 my-10">
+        {programCardData.map((data) => (
+          <ProgramCard
+            key={data.title}
+            {...data}
+          />
+        ))}
+      </div>
+
+      <div className="flex flex-col gap-5 w-full">
+        <h3 className="text-2xl text-primary font-display font-semibold text-center">
+          Entry Requirements
+        </h3>
+        <ul className="flex flex-col gap-3">
+          {program.requirements.map((requirement) => (
+            <li
+              key={requirement}
+              className="flex items-center gap-4"
+            >
+              <CheckCircle className="text-primary shrink-0" />
+              <span className="text-muted-foreground text-lg">
+                {requirement}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
