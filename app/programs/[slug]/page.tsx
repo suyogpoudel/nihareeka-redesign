@@ -66,13 +66,7 @@ const ProgramPage = async ({
         {programCardData.map((data) => (
           <div
             key={data.title}
-            className="
-        flex-grow
-        basis-full
-        sm:basis-[45%]
-        lg:basis-[30%]
-        max-w-sm
-      "
+            className="grow basis-full sm:basis-[45%] lg:basis-[30%] max-w-sm"
           >
             <ProgramCard
               key={data.title}

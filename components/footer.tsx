@@ -84,7 +84,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-card px-8 py-4 rounded-full flex justify-between max-sm:flex-col items-center gap-3 shadow-xs">
+      <div className="bg-card px-8 py-4 rounded-full flex justify-between max-sm:flex-col items-center gap-3 inset-shadow-sm">
         <p className="text-muted-foreground">&copy; 2026 | Nihareeka College</p>
         <p className="text-muted-foreground flex items-center gap-1">
           Developed By:
