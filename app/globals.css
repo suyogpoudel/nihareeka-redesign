@@ -96,3 +96,7 @@
 .heading {
   @apply text-2xl font-display text-primary;
 }
+
+.sub-heading {
+  @apply text-xl text-primary font-display mb-3 mx-auto mt-8;
+}
