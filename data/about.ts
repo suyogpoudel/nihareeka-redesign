@@ -22,6 +22,12 @@ import AmitDhakal from "@/public/assets/people/amit_dhakal.jpeg";
 import DipeshBastola from "@/public/assets/people/dipesh_bastola.jpeg";
 import TulsiKhatiwada from "@/public/assets/people/tulsi_khatiwada.jpeg";
 
+import SarojBhattarai from "@/public/assets/people/facultyMembers/saroj_bhattarai.jpeg";
+import HareramKamat from "@/public/assets/people/facultyMembers/hareram_kamat.jpeg";
+import KrishnaDevBahardar from "@/public/assets/people/facultyMembers/krishna_dev_bahardar.jpeg";
+import UjjwalRijal from "@/public/assets/people/facultyMembers/ujjwal_rijal.jpeg";
+import JiwanDhamala from "@/public/assets/people/facultyMembers/jiwan_dhamala.jpeg";
+
 // Program Lists
 export const technicalPrograms = [
   {
@@ -152,5 +158,33 @@ export const managementTeam = [
     facebook: "/",
     whatsapp: "/",
     x: "/",
+  },
+];
+
+export const facultyMembers = [
+  {
+    name: "Saroj Bhattarai",
+    post: "Co-ordinator",
+    image: SarojBhattarai,
+  },
+  {
+    name: "Er. Hareram Kamat",
+    post: "HOD, B.Sc. CSIT",
+    image: HareramKamat,
+  },
+  {
+    name: "Krishna Dev Bahardar",
+    post: "Co-ordinator, BIM",
+    image: KrishnaDevBahardar,
+  },
+  {
+    name: "Ujjwal Rijal",
+    post: "Co-ordinator, BCA",
+    image: UjjwalRijal,
+  },
+  {
+    name: "Jiwan Dhamala",
+    post: "Co-ordinator, BBS",
+    image: JiwanDhamala,
   },
 ];

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import {
   facultyExcellence,
+  facultyMembers,
   foundingVision,
   managementPrograms,
   managementTeam,
@@ -259,6 +260,33 @@ const About = () => {
                 >
                   <IconBrandWhatsapp />
                 </Link>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col mb-4 w-full">
+        <h2 className="sub-heading">Management Team</h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          {facultyMembers.map((item) => (
+            <Card
+              key={item.name}
+              className="min-w-[25%]"
+            >
+              <CardContent className="flex flex-col items-center justify-center text-center">
+                <Image
+                  src={item.image}
+                  alt={`Picture of ${item.name}`}
+                  width={100}
+                  height={100}
+                  className="rounded-full aspect-square border-2 border-primary"
+                />
+                <CardTitle className="text-muted-foreground">
+                  {item.name}
+                </CardTitle>
+                <CardDescription className="text-primary tracking-wider">
+                  {item.post}
+                </CardDescription>
               </CardContent>
             </Card>
           ))}
