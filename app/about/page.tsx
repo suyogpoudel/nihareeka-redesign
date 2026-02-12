@@ -1,13 +1,27 @@
 import { Button } from "@/components/ui/button";
 import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
   facultyExcellence,
   foundingVision,
   managementPrograms,
+  managementTeam,
   partnerships,
   technicalPrograms,
 } from "@/data/about";
 import collegeHighlights from "@/data/college-highlights";
+import {
+  IconBrandFacebook,
+  IconBrandWhatsapp,
+  IconBrandX,
+} from "@tabler/icons-react";
 import { Download } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const About = () => {
@@ -149,7 +163,10 @@ const About = () => {
 
         <ul className="flex flex-col gap-3 text-left md:ml-3">
           {partnerships.map((partnership) => (
-            <li className="flex flex-col gap-2">
+            <li
+              className="flex flex-col gap-2"
+              key={partnership.category}
+            >
               <p className="text-primary text-lg font-semibold">
                 {partnership.category}
               </p>
@@ -195,6 +212,55 @@ const About = () => {
                 <p className="text-primary/90">{text}</p>
               </div>
             </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col mb-4 w-full">
+        <h2 className="sub-heading">Management Team</h2>
+        <div className="grid grid-cols-4 max-md:grid-cols-2 w-full gap-4">
+          {managementTeam.map((item) => (
+            <Card key={item.name}>
+              <CardHeader className="flex flex-col items-center justify-center text-center">
+                <Image
+                  src={item.image}
+                  alt={`Picture of ${item.name}`}
+                  width={100}
+                  height={100}
+                  className="rounded-full aspect-square border-2 border-primary"
+                />
+                <CardTitle className="text-muted-foreground">
+                  {item.name}
+                </CardTitle>
+                <CardDescription className="text-primary tracking-wider">
+                  {item.post}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex items-center justify-evenly">
+                <Link
+                  href={item.facebook}
+                  target="_blank"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  <IconBrandFacebook />
+                </Link>
+
+                <Link
+                  href={item.x}
+                  target="_blank"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  <IconBrandX />
+                </Link>
+
+                <Link
+                  href={item.whatsapp}
+                  target="_blank"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  <IconBrandWhatsapp />
+                </Link>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

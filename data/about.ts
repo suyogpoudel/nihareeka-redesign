@@ -17,6 +17,11 @@ import {
   Globe,
 } from "lucide-react";
 
+import RupeshKhatiwada from "@/public/assets/people/rupesh_khatiwada.jpeg";
+import AmitDhakal from "@/public/assets/people/amit_dhakal.jpeg";
+import DipeshBastola from "@/public/assets/people/dipesh_bastola.jpeg";
+import TulsiKhatiwada from "@/public/assets/people/tulsi_khatiwada.jpeg";
+
 // Program Lists
 export const technicalPrograms = [
   {
@@ -112,5 +117,40 @@ export const partnerships = [
         icon: BookOpen,
       },
     ],
+  },
+];
+
+export const managementTeam = [
+  {
+    name: "Rupesh Khatiwada",
+    post: "Chairman",
+    image: RupeshKhatiwada,
+    facebook: "/",
+    whatsapp: "/",
+    x: "/",
+  },
+  {
+    name: "Dipesh Bastola",
+    post: "Vice Chairman",
+    image: DipeshBastola,
+    facebook: "/",
+    whatsapp: "/",
+    x: "/",
+  },
+  {
+    name: "Amit Dhakal",
+    post: "Campus Chief",
+    image: AmitDhakal,
+    facebook: "/",
+    whatsapp: "/",
+    x: "/",
+  },
+  {
+    name: "Tulsi Khatiwada",
+    post: "Director",
+    image: TulsiKhatiwada,
+    facebook: "/",
+    whatsapp: "/",
+    x: "/",
   },
 ];
