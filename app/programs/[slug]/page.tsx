@@ -42,7 +42,7 @@ const ProgramPage = async ({
           <h2 className="text-primary text-xl font-semibold">
             Career Outcomes
           </h2>
-          <div className="grid max-sm:grid-cols-1 w-full grid-cols-2 gap-4">
+          <div className="flex flex-wrap justify-center gap-4 ">
             {program.careerOutcomes.map((outcome) => (
               <div
                 key={outcome}
@@ -62,12 +62,23 @@ const ProgramPage = async ({
         />
       </div>
 
-      <div className="grid grid-cols-3 max-md:grid-cols-1 gap-8 my-10">
+      <div className="flex flex-wrap justify-center gap-8 my-10">
         {programCardData.map((data) => (
-          <ProgramCard
+          <div
             key={data.title}
-            {...data}
-          />
+            className="
+        flex-grow
+        basis-full
+        sm:basis-[45%]
+        lg:basis-[30%]
+        max-w-sm
+      "
+          >
+            <ProgramCard
+              key={data.title}
+              {...data}
+            />
+          </div>
         ))}
       </div>
 
