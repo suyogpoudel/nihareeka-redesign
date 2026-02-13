@@ -271,7 +271,7 @@ const About = () => {
           {facultyMembers.map((item) => (
             <Card
               key={item.name}
-              className="min-w-[25%]"
+              className="min-w-[25%] max-sm:min-w-[35%] max-md:min-w-[33%]"
             >
               <CardContent className="flex flex-col items-center justify-center text-center">
                 <Image
