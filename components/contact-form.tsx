@@ -21,7 +21,7 @@ const ContactForm = () => {
   });
 
   const onContact = async (data: ContactFormData) => {
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
     try {
       const res = await fetch(`${API_URL}/api/contact`, {
@@ -64,13 +64,13 @@ const ContactForm = () => {
                 htmlFor="name"
                 className="px-3 text-primary font-medium"
               >
-                John Doe
+                Name
               </FieldLabel>
               <Input
                 {...field}
                 id="name"
                 className="w-full focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
-                placeholder="Name"
+                placeholder="John Doe"
               />
               {fieldState.error && <FieldError errors={[fieldState.error]} />}
             </Field>
@@ -85,13 +85,13 @@ const ContactForm = () => {
                 htmlFor="email"
                 className="px-3 text-primary font-medium"
               >
-                johndoe@example.com
+                Email
               </FieldLabel>
               <Input
                 {...field}
                 id="email"
                 className="w-full focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
-                placeholder="Email"
+                placeholder="johndoe@example.com"
               />
               {fieldState.error && <FieldError errors={[fieldState.error]} />}
             </Field>
@@ -106,13 +106,13 @@ const ContactForm = () => {
                 htmlFor="subject"
                 className="px-3 text-primary font-medium"
               >
-                Your reason for messaging
+                Subject
               </FieldLabel>
               <Input
                 {...field}
                 id="subject"
                 className="w-full focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
-                placeholder="Subject"
+                placeholder="Your reason for messaging"
               />
               {fieldState.error && <FieldError errors={[fieldState.error]} />}
             </Field>
@@ -127,14 +127,14 @@ const ContactForm = () => {
                 htmlFor="message"
                 className="px-3 text-primary font-medium"
               >
-                Your message
+                Message
               </FieldLabel>
               <Textarea
                 {...field}
                 id="message"
                 rows={5}
                 className="w-full focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
-                placeholder="Message"
+                placeholder="Your message"
               />
               {fieldState.error && <FieldError errors={[fieldState.error]} />}
             </Field>
