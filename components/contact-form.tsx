@@ -21,7 +21,7 @@ const ContactForm = () => {
   });
 
   const onContact = async (data: ContactFormData) => {
-    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
     try {
       const res = await fetch(`${API_URL}/api/contact`, {
@@ -64,7 +64,7 @@ const ContactForm = () => {
                 htmlFor="name"
                 className="px-3 text-primary font-medium"
               >
-                Name
+                John Doe
               </FieldLabel>
               <Input
                 {...field}
@@ -85,7 +85,7 @@ const ContactForm = () => {
                 htmlFor="email"
                 className="px-3 text-primary font-medium"
               >
-                Email
+                johndoe@example.com
               </FieldLabel>
               <Input
                 {...field}
@@ -106,7 +106,7 @@ const ContactForm = () => {
                 htmlFor="subject"
                 className="px-3 text-primary font-medium"
               >
-                Subject
+                Your reason for messaging
               </FieldLabel>
               <Input
                 {...field}
@@ -127,7 +127,7 @@ const ContactForm = () => {
                 htmlFor="message"
                 className="px-3 text-primary font-medium"
               >
-                Message
+                Your message
               </FieldLabel>
               <Textarea
                 {...field}
