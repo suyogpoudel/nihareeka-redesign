@@ -162,7 +162,12 @@ const ProgramPage = async ({
         asChild
         size="lg"
       >
-        <Link href={program.syllabus}>View Syllabus</Link>
+        <Link
+          href={program.syllabus}
+          target="_blank"
+        >
+          View Syllabus
+        </Link>
       </Button>
     </div>
   );
