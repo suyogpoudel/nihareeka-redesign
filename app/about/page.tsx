@@ -16,14 +16,59 @@ import {
   technicalPrograms,
 } from "@/data/about";
 import collegeHighlights from "@/data/college-highlights";
+import { baseMetadata, baseKeywords } from "@/lib/base-metadata";
 import {
   IconBrandFacebook,
   IconBrandWhatsapp,
   IconBrandX,
 } from "@tabler/icons-react";
 import { Download } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  ...baseMetadata,
+  title: "About Nihareeka College of Management & IT",
+  description:
+    "Learn about Nihareeka College of Management & Information Technology in Biratnagar. Discover our programs, faculty excellence, founding vision, partnerships, and management team dedicated to providing high-quality education in IT and Management.",
+  keywords: [
+    ...baseKeywords,
+    "About Nihareeka",
+    "Faculty",
+    "Programs",
+    "Management",
+    "IT",
+    "Biratnagar College",
+  ],
+
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: "About Nihareeka College - Programs, Faculty & Vision",
+    description:
+      "Explore Nihareeka College of Management & IT in Biratnagar, its programs, faculty, founding vision, partnerships, and management team.",
+    url: "https://nihareeka-redesign.vercel.app/about",
+    images: [
+      {
+        url: "https://nihareeka-redesign.vercel.app/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nihareeka College Campus and Students",
+      },
+    ],
+  },
+
+  twitter: {
+    ...baseMetadata.twitter,
+    title: "About Nihareeka College of Management & IT",
+    description:
+      "Explore Nihareeka College of Management & IT in Biratnagar, its programs, faculty, founding vision, partnerships, and management team.",
+    images: ["https://nihareeka-redesign.vercel.app/images/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://nihareeka-redesign.vercel.app/about",
+  },
+};
 
 const About = () => {
   return (

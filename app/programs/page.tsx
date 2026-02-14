@@ -8,8 +8,59 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { programs } from "@/data/programs";
+import { baseMetadata, baseKeywords } from "@/lib/base-metadata";
 import { Calendar, Clock } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  ...baseMetadata,
+  title: "Programs at Nihareeka College of Management & IT",
+  description:
+    "Explore the academic programs offered by Nihareeka College of Management & Information Technology in Biratnagar, including BCA, BSc. CSIT, BIM, BHM, BBS, and MBS. Designed to prepare students for successful careers in IT, Management, and Hospitality.",
+  keywords: [
+    ...baseKeywords,
+    "Programs",
+    "BCA",
+    "BSc CSIT",
+    "BIM",
+    "BHM",
+    "BBS",
+    "MBS",
+    "IT Education",
+    "Management Education",
+    "Hospitality Education",
+    "Biratnagar College",
+  ],
+
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: "Programs - Nihareeka College of Management & IT",
+    description:
+      "Check out the BCA, BSc CSIT, BIM, BHM, BBS, and MBS programs at Nihareeka College of Management & IT in Biratnagar. Prepare for success in IT, Management, and Hospitality fields.",
+    url: "https://nihareeka-redesign.vercel.app/programs",
+    images: [
+      {
+        url: "https://nihareeka-redesign.vercel.app/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nihareeka College Programs Overview",
+      },
+    ],
+  },
+
+  twitter: {
+    ...baseMetadata.twitter,
+    title: "Programs at Nihareeka College of Management & IT",
+    description:
+      "Check out the BCA, BSc CSIT, BIM, BHM, BBS, and MBS programs at Nihareeka College of Management & IT in Biratnagar. Prepare for success in IT, Management, and Hospitality fields.",
+    images: ["https://nihareeka-redesign.vercel.app/images/og-image.png"],
+  },
+
+  alternates: {
+    canonical: "https://nihareeka-redesign.vercel.app/programs",
+  },
+};
 
 const Programs = () => {
   return (

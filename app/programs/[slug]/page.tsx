@@ -1,8 +1,69 @@
 import ProgramCard from "@/components/program-card";
 import { programs } from "@/data/programs";
-import { Calendar, Check, CheckCircle, Clock, School } from "lucide-react";
+import { baseKeywords, baseMetadata } from "@/lib/base-metadata";
+import { Calendar, CheckCircle, Clock, School } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
+
+// Correct type
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  const lowercaseSlug = slug.toLowerCase();
+
+  const program = programs.find((program) => program.link === lowercaseSlug);
+
+  if (!program) {
+    return {
+      title: "Program Not Found",
+      description: "The requested program does not exist.",
+    };
+  }
+
+  const keywords = [
+    ...baseKeywords,
+    program.title,
+    program.affiliation,
+    "Program Details",
+    "Career Outcomes",
+    "Admission Requirements",
+  ];
+
+  return {
+    ...baseMetadata,
+    title: `${program.title} - Nihareeka College of Management & IT`,
+    description: program.description,
+    keywords,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      title: `${program.title} - Nihareeka College`,
+      description: program.description,
+      url: `https://nihareeka-redesign.vercel.app/programs/${program.link}`,
+      images: [
+        {
+          url: `https://nihareeka-redesign.vercel.app${program.image}`,
+          width: 1200,
+          height: 630,
+          alt: `${program.title} at Nihareeka College`,
+        },
+      ],
+    },
+    twitter: {
+      ...baseMetadata.twitter,
+      title: `${program.title} - Nihareeka College`,
+      description: program.description,
+      images: [`https://nihareeka-redesign.vercel.app${program.image}`],
+    },
+    alternates: {
+      canonical: `https://nihareeka-redesign.vercel.app/programs/${program.link}`,
+    },
+  };
+}
 
 const ProgramPage = async ({
   params,

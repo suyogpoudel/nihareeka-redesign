@@ -4,6 +4,50 @@ import HeroImage from "@/public/assets/hero.jpeg";
 import Courses from "@/components/home/courses";
 import Testimonials from "@/components/home/testimonials";
 import RegisterButton from "@/components/register-button";
+import { baseKeywords, baseMetadata } from "@/lib/base-metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  ...baseMetadata,
+  title: "Nihareeka College of Management & Information Technology",
+  description:
+    "Nihareeka College of Management & Information Technology in Biratnagar is known for producing outstanding students with practical skills in IT and Management. Join us to excel in your career.",
+  keywords: [
+    ...baseKeywords,
+    "Home",
+    "Admissions",
+    "Programs",
+    "Biratnagar College",
+  ],
+
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: "Nihareeka College of Management & IT - Home",
+    description:
+      "Nihareeka College of Management & Information Technology in Biratnagar is known for producing outstanding students with practical skills in IT and Management.",
+    url: "https://nihareeka-redesign.vercel.app",
+    images: [
+      {
+        url: "https://nihareeka-redesign.vercel.app/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nihareeka College - Students and Campus",
+      },
+    ],
+  },
+
+  twitter: {
+    ...baseMetadata.twitter,
+    title: "Nihareeka College of Management & IT - Home",
+    description:
+      "Nihareeka College of Management & Information Technology in Biratnagar is known for producing outstanding students with practical skills in IT and Management.",
+    images: ["https://nihareeka-redesign.vercel.app/images/og-image.png"],
+  },
+
+  alternates: {
+    canonical: "https://nihareeka-redesign.vercel.app",
+  },
+};
 
 const Home = () => {
   return (
