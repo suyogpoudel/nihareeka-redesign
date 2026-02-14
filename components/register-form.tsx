@@ -28,7 +28,7 @@ const defaultValues: RegisterFormData = {
   email: "",
   phone: "",
   address: "",
-  entranceMarks: 0,
+  entranceMarks: "",
   entranceRoll: "",
   schoolName: "", // required for non-MBS
   collegeName: "", // optional for non-MBS
