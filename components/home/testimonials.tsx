@@ -33,19 +33,19 @@ const testimonials = [
     name: "Hareram Kamat (HOD, B.Sc. CSIT)",
     image: HareramKamat,
     feedback:
-      "The education and training I received at Nihareeka College equipped me with the skills and confidence to excel in my career. The college's focus on practical learning has been instrumental in my professional growth.",
+      "Teaching at Nihareeka College has been a rewarding experience. The students are eager to learn, and the college fosters an environment of creativity and collaboration.",
   },
   {
     name: "Neha Koirala (Student)",
     image: NehaKoirala,
     feedback:
-      "Nihareeka College provided me with a strong foundation in both academics and extracurricular activities. The supportive environment and quality education helped me achieve my goals.",
+      "Nihareeka College provided me with the skills and confidence to excel in my career. The faculty is supportive, and the curriculum is truly comprehensive.",
   },
   {
     name: "Aman Rajbanshi (Student)",
     image: AmanRajbanshi,
     feedback:
-      "The college's emphasis on innovation and critical thinking has shaped my approach to problem-solving. I'm grateful for the opportunities and experiences that Nihareeka College offered.",
+      "Nihareeka College has been a transformative experience for me. The hands-on learning and real-world applications have truly prepared me for the challenges in the IT industry.",
   },
 ];
 
