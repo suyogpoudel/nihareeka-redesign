@@ -22,6 +22,7 @@ const ContactForm = () => {
 
   const onContact = async (data: ContactFormData) => {
     const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    console.log(`API URL: ${API_URL}`);
 
     try {
       const res = await fetch(`${API_URL}/api/contact`, {
