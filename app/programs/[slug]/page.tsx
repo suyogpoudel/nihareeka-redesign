@@ -1,9 +1,11 @@
 import ProgramCard from "@/components/program-card";
+import { Button } from "@/components/ui/button";
 import { programs } from "@/data/programs";
 import { baseKeywords, baseMetadata } from "@/lib/base-metadata";
 import { Calendar, CheckCircle, Clock, School } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
 // Correct type
@@ -137,7 +139,7 @@ const ProgramPage = async ({
         ))}
       </div>
 
-      <div className="flex flex-col gap-5 w-full">
+      <div className="flex flex-col gap-5 w-full mb-5">
         <h3 className="text-2xl text-primary font-display font-semibold text-center">
           Entry Requirements
         </h3>
@@ -155,6 +157,13 @@ const ProgramPage = async ({
           ))}
         </ul>
       </div>
+
+      <Button
+        asChild
+        size="lg"
+      >
+        <Link href={program.syllabus}>View Syllabus</Link>
+      </Button>
     </div>
   );
 };
