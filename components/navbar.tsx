@@ -15,6 +15,7 @@ const Navbar = () => {
           alt="Logo of Nihareeka College"
           width={300}
           height={100}
+          className="w-40 sm:w-64 lg:w-72 h-auto"
         />
       </Link>
 

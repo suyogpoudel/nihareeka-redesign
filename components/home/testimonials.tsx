@@ -62,14 +62,14 @@ const Testimonials = () => {
             delay: 7500,
           }),
         ]}
-        className="w-full max-w-xl mx-auto"
+        className="relative w-full max-w-xl mx-auto"
       >
         <CarouselContent>
           {testimonials.map((testimonial) => (
             <CarouselItem key={testimonial.name}>
               <div className="p-1">
                 <Card>
-                  <CardContent className="flex items-center justify-center gap-7 p-6">
+                  <CardContent className="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 text-center sm:text-left">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -92,8 +92,8 @@ const Testimonials = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden sm:flex" />
+        <CarouselNext className="hidden sm:flex" />
       </Carousel>
     </div>
   );

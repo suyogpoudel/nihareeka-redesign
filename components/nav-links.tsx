@@ -108,7 +108,7 @@ const NavLinks = () => {
                 <ul className="flex flex-col gap-10 items-center justify-center">
                   {renderLinks()}
                 </ul>
-                <RegisterButton />
+                <RegisterButton onClick={() => setIsOpen(false)} />
               </motion.div>
             </>
           )}
